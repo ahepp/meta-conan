@@ -80,7 +80,7 @@ EOF
             conan user -p ${CONAN_PASSWORD} -r ${NAME} ${CONAN_USER}
         done
     fi
-    conan install ${CONAN_PKG} --profile ${CONAN_PROFILE_PATH} -if ${D}
+    conan install ${CONAN_PKG} -r ${CONAN_REMOTE_NAME} --profile ${CONAN_PROFILE_PATH} -if ${D}
     rm -f ${D}/deploy_manifest.txt
 }
 
